@@ -6,6 +6,8 @@ import p5_img from "./product_15.png";
 import p6_img from "./product_2.png";
 import p7_img from "./product_17.png";
 import p8_img from "./product_28.png";
+import p9_img from "./Riyan.png";
+import p10_img from "./Wahiba.png";
 
 let new_collections = [
   {
@@ -63,6 +65,20 @@ let new_collections = [
     image: p8_img,
     new_price: 100.0,
     old_price: 150.0,
+  },
+  {
+    id: 29,
+    name: "Boys White Blue Colourblocked Hooded Sweatshirt",
+    image: p9_img,
+    new_price: 110.0,
+    old_price: 156.0,
+  },
+  {
+    id: 30,
+    name: "Girls Greem Whait Colourblocked Hooded Sweatshirt",
+    image: p10_img,
+    new_price: 120.0,
+    old_price: 170.0,
   },
 ];
 
