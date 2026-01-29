@@ -4,10 +4,13 @@ import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
 
 
-const ProductDisplay = (props) => {
-  const {product} = props;
+const ProductDisplay = ({product}) => {
+  // const {product} = props;
+  if (!product) {
+    return <div>Loading...</div>;
+  }
   return (
-    <div clasName='productdisplay'>
+    <div className='productdisplay'>
       <div className='productdisplay-left'>
         <div className='productdisplay-img-list'>
           <img src={product.image} alt=''/>
@@ -29,6 +32,35 @@ const ProductDisplay = (props) => {
           <img src={star_dull_icon} alt=''/>
           <p>(122)</p>
         </div>
+        <div className='productdisplay-right-price'>
+          <div className='productdisplay-right-price-old'>
+            ${product.old_price}
+          </div>
+          <div className='productdisplay-right-price-new'>
+            ${product.new_price}
+          </div>
+          <div className='productdisplay-right-description'>
+            A lightweight usually knitted, pullover shirt, close-ditting and with a 
+            round nocklino and shortsloovos, worn as an undershirt or outer gorment. 
+          </div>
+          <div className='productdisplay-right-size'>
+            <h1>Select Size</h1>
+          </div>
+          <div className='productdisplay-right-size'>
+            <div>S</div>
+            <div>M</div>
+            <div>L</div>
+            <div>XL</div>
+            <div>XXL</div>
+          </div>
+        </div>
+        <button>ADD TO CART</button>
+        <p className='productdisplay-right-category'>
+          <span>Category :</span>Women, T-Shirt, Crop Top
+        </p>
+        <p className='productdisplay-right-category'>
+          <span>Tags :</span>Modern, Latest
+        </p>
       </div>
     </div>
   )
